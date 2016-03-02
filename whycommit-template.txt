@@ -1,0 +1,16 @@
+Title (under 50 characters)
+
+# The title should fill this blank: "If applied, this change will ________".
+Omit the "If applied" part, however, since the title will show up in short
+displays.
+
+Why: This paragraph should explain the "why" behind the code change. Not why you
+made the change, but why the changes that were made were the right changes to
+make for the requirements of the feature or bug to be met.
+
+What: This paragraph should explain what was changed. Enumerate logical
+components that were changed as part of this commit.
+
+# Omit the "how" of the commit, i.e., how you changed the code. This should be
+obvious from the diff itself. See http://chris.beams.io/posts/git-commit/ for
+more details on this format.
