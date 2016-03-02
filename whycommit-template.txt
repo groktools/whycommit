@@ -1,16 +1,25 @@
-Title (under 50 characters)
+Title that answers "If applied, this change will ____"
 
-# The title should fill this blank: "If applied, this change will ________".
-Omit the "If applied" part, however, since the title will show up in short
-displays.
+Addresses
+---------
+# Bug/Feature ID and one-line description
 
-Why: This paragraph should explain the "why" behind the code change. Not why you
-made the change, but why the changes that were made were the right changes to
-make for the requirements of the feature or bug to be met.
+Why
+---
+# This paragraph should explain the "why" behind the code change.
+# It should explain why the code change was done to a future reader.
+#
+# All features and bugs require code changes, so this section should NOT
+# have the original request as the "why".
+# Instead, explain why these changes were chosen from the set of possible
+# solution options.
 
-What: This paragraph should explain what was changed. Enumerate logical
+What
+----
+This paragraph should explain what was changed. Enumerate logical
 components that were changed as part of this commit.
 
-# Omit the "how" of the commit, i.e., how you changed the code. This should be
-obvious from the diff itself. See http://chris.beams.io/posts/git-commit/ for
-more details on this format.
+# Omit the "how" of the commit, i.e., how you changed the code.
+# This should be obvious from the diff itself.
+#
+# See http://chris.beams.io/posts/git-commit/ for more details.
