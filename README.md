@@ -4,7 +4,7 @@ Add a reason for your change in the commit message
 # Introduction
 **whycommit** is a simple addition to your git workflow - it adds a template for your commit messages that helps you to guide future readers so that they understand your change better.
 
-[Screenshot](https://raw.githubusercontent.com/groktools/whycommit/master/whyCommit.png)
+![Screenshot](https://raw.githubusercontent.com/groktools/whycommit/master/whyCommit.png)
 
 #Why whycommit
 As found by [Maalej et al](https://mobis.informatik.uni-hamburg.de/wp-content/uploads/2014/06/TOSEM-Maalej-Comprehension-PrePrint2.pdf) (page 19):
@@ -34,6 +34,7 @@ Note that the intent is to inform a future reader about your implementation choi
 * "Because hashmaps are the right choice given the surrounding code" not "Because ISSUE-123 had to be fixed"
 * "Because a refactor of this class reduces dependencies" not "Part of team's tech debt reduction effort"
 
+See the commit messages in this repo for some examples.
 
 ### Escape hatch: Avoiding the why on short commits
 If you're the type that commits very often, not all of our commits have a meaning that spans the eons. In that scenario, you can use the `git commit -m "short commit message"` option to bypass the template. Note that if you've installed the commit hook, it will prevent you from committing even then. To avoid this, use `git commit -m "# short commit message"`. Note the `#`. The hook uses this to recognize a short commit message and allows it to pass.
