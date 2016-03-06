@@ -23,12 +23,20 @@ Clearly all of this can be done by hand, i.e., you could create your own templat
 4. Run `install-hook.*` to install the pre-commit hook, if you so desire.
 5. Profit!...err..from all the future knowledge that is.
 
-# Use
+# Usage
 
 Once installed, the `whycommit` template should show up in your editor's commit UI (see below for actual coverage). If you've also installed the pre-commit hook, committing should be prevented unless a why section exists.
 
+## Its "Why I implemented it this way", not "Why I made this change"
+Note that the intent is to inform a future reader about your implementation choices, not the reason for the implementation! So:
+* "Because hashmaps are the right choice given the surrounding code" not "Because ISSUE-123 had to be fixed"
+* "Because a refactor of this class reduces dependencies" not "Part of team's tech debt reduction effort"
+
+
 ### Escape hatch: Avoiding the why on short commits
 If you're the type that commits very often, not all of our commits have a meaning that spans the eons. In that scenario, you can use the `git commit -m "short commit message"` option to bypass the template. Note that if you've installed the commit hook, it will prevent you from committing even then. To avoid this, use `git commit -m "# short commit message"`. Note the `#`. The hook uses this to recognize a short commit message and allows it to pass.
+
+# Editor/IDE Coverage
 
 | Editor/IDE | Support Level | Notes         |
 |------------|---------------|---------------|
