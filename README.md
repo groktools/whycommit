@@ -11,7 +11,7 @@ As found by [Maalej et al](https://mobis.informatik.uni-hamburg.de/wp-content/up
 This repo contains tools to bridge this gap. Included are:
 * A commit message template (`whycommit-template.txt`) that requires the author of the change to answer this question for future readers to grok.
 * A bash/bat shell script to install the message template for one repo or for all of them.
-* A bash/bat shell script to install a pre-commit hook preventing commits without a Why section.
+* A bash/bat shell script to install a pre-commit hook preventing commits without a Why section (with an escape hatch for "small" commits detailed below).
 
 # Install
 
@@ -27,6 +27,9 @@ Clearly all of this can be done by hand, i.e., you could create your own templat
 
 Once installed, the `whycommit` template should show up in your editor's commit UI (see below for actual coverage). If you've also installed the pre-commit hook, committing should be prevented unless a why section exists.
 
+### Escape hatch: Avoiding the why on short commits
+If you're the type that commits very often, not all of our commits have a meaning that spans the eons. In that scenario, you can use the `git commit -m "short commit message"` option to bypass the template. Note that if you've installed the commit hook, it will prevent you from committing even then. To avoid this, use `git commit -m "# short commit message"`. Note the `#`. The hook uses this to recognize a short commit message and allows it to pass.
+
 | Editor/IDE | Support Level | Notes         |
 |------------|---------------|---------------|
 |git cli| Native | Natively supported |
@@ -36,8 +39,3 @@ Once installed, the `whycommit` template should show up in your editor's commit 
 |Eclipse | Not supported| Eclipse's Mylyn plugin has its [own commit templates](https://wiki.eclipse.org/EGit/User_Guide#Working_with_Tasks), however. |
 |MS VS Code| Not supported | Code has a tiny commit window. There might be UX issues with a large format message to overcome first|
 |Sublime Text |Supported as editor| Sublime can be configured as a commit message editor. There is a [paid git plugin](https://sublimegit.net/) that seems to support templates, but its not clear if that's true since its closed-source. |
-
-# Enhancements
-
-* Provide a way to "opt out" of adding a why when the change is not meaningful enough, but valuable as a commit - maybe in a personal branch that's meant to be squashed in the future.
-  * Idea: Use `-m` to checkin "minor" changes with the full checkin being done with the template. If the pre-commit hook is installed use a convention such as `-m "# small commit msg"` which is consistent with conventions and still allows the pre-commit hook to work properly.
