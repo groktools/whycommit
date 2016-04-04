@@ -1,4 +1,5 @@
 - [ ] implement commitmsg hook in powershell
 - [ ] move tests to [bats](https://github.com/sstephenson/bats)
 - [ ] New feature: implement prog-lit: Collecting all commit messages and publishing them centrally by file and folder.
-- [ ] Implement install-hook.bat 
+- [ ] Implement install-hook.bat
+- [X] make it easy to install whycommit. right now, it requires cloning the repo, copying files over and running a shell script uselessly.  
